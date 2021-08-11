@@ -39,11 +39,14 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
 Plug 'nvim-lua/completion-nvim'
 
-" Dracula Theme
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Everforest Theme
+Plug 'sainnhe/everforest'
 
 " Initialize plugin system
  call plug#end()
 
-colorscheme dracula
+set background=dark
+
+colorscheme everforest
 set number
+
