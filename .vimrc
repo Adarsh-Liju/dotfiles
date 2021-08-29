@@ -39,14 +39,13 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 
 Plug 'nvim-lua/completion-nvim'
 
-"Everforest Theme
-Plug 'sainnhe/everforest'
+" Ayu theme
+Plug 'ayu-theme/ayu-vim'
 
 " Initialize plugin system
- call plug#end()
 
-set background=dark
-
-colorscheme everforest
+call plug#end()
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 set number
-
