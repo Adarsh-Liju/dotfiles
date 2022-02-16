@@ -75,3 +75,4 @@ set termguicolors
 let ayucolor="dark"
 colorscheme ayu
 set number
+set mouse=a
