@@ -10,6 +10,4 @@
 ## `i3`
 
 1. Put `i3` inside the `.config`folder.
-2. This config has a lot of dependencies.Do check them before installing.
-
-
+2. bumblebee-status can be installed from `https://github.com/tobi-wan-kenobi/bumblebee-status` which is used for the status bar.Do update the path in *i3-config* file.
