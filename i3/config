@@ -226,7 +226,7 @@ bindsym Print                 exec flameshot full
 bar {
 	font pango:Jetbrains Mono 11
 	position top
-	status_command /home/adarsh/bumblebee-status/bumblebee-status -m speedtest nic disk:root memory battery cpu date time \
+	status_command /home/adarsh/bumblebee-status/bumblebee-status -m amixer nic disk:root memory battery cpu date time \
 		-p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
 		-t powerline
 }
