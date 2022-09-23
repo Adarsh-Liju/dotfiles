@@ -1,3 +1,5 @@
+nnoremap cpf i#include<iostream><Esc>ousing namespace std;<Esc>o<CR>int main(){<Esc>o<Esc>oreturn 0;<Esc>o}<Esc>kki
+nnoremap cpp :!c++ % -o %:r && %:r<CR>
 "   mm       #                       #             m        "       "         
 "   ##    mmm#   mmm    m mm   mmm   # mm          #      mmm     mmm   m   m 
 "  #  #  #" "#  "   #   #"  " #   "  #"  #         #        #       #   #   # 
@@ -63,12 +65,10 @@ Plug 'ayu-theme/ayu-vim'
 " Async Support
 
 Plug 'skywind3000/asyncrun.vim'
-
+" LSP
+Plug 'prabirshrestha/vim-lsp'
 " Pandoc MD Preview
 Plug 'conornewton/vim-pandoc-markdown-preview'
-" ARM syntax
-Plug 'ARM9/arm-syntax-vim'
-" Initialize plugin system
 
 call plug#end()
 set termguicolors
@@ -76,3 +76,5 @@ let ayucolor="dark"
 colorscheme ayu
 set number
 set mouse=a
+autocmd TextChanged,TextChangedI <buffer> silent write
+
