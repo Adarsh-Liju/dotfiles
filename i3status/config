@@ -54,10 +54,6 @@ tztime local {
         hide_if_equals_localtime = true
 }
 
-tztime berlin {
-        format = "%Y-%m-%d %H:%M:%S %Z"
-        timezone = "Europe/Berlin"
-}
 
 cpu_usage {
   format = "CPU: %usage"
