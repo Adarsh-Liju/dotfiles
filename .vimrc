@@ -69,7 +69,8 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'prabirshrestha/vim-lsp'
 " Pandoc MD Preview
 Plug 'conornewton/vim-pandoc-markdown-preview'
-
+" Vim Wiki
+Plug 'vimwiki/vimwiki'
 call plug#end()
 set termguicolors
 let ayucolor="dark"
