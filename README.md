@@ -3,6 +3,8 @@
 My dotfiles
 
 ```bash
+git clone https://github.com/Adarsh-Liju/dotfiles
+cd dotfiles
 git submodule init
 git submodule update
 ```
