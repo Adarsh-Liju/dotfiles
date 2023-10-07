@@ -1,56 +1,39 @@
+let mapleader =","
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
-call plug#begin('~/.vim/plugged')
-
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
-"Surround.vim is all about : parentheses, brackets, quotes, XML
-"tags, and more. The plugin provides mappings to easily delete, change and add
-"such surroundings in pairs.
+set wildmenu
+set hidden 
+call plug#begin()
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-
-" If you don't have nodejs and yarn
-" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
-" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-
-"a nice statusline at the bottom of each vim window
+Plug 'tpope/vim-markdown'
+Plug 'junegunn/seoul256.vim'
+Plug 'preservim/nerdtree'
+Plug 'junegunn/goyo.vim'
+Plug 'jreybert/vimagit'
 Plug 'vim-airline/vim-airline'
-
-"NERDTree (file explorer for vim)
-Plug 'scrooloose/nerdtree'
-
-"syntax checking
-Plug 'scrooloose/syntastic'
-
-"Sonokai Color scheme
-
-Plug 'sainnhe/sonokai'
-"vim airline themes
-
-Plug 'vim-airline/vim-airline-themes'
-
-"syntax checking using lsp support
-
-Plug 'w0rp/ale'
-
-"markdown preview
-
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
-
-
-Plug 'nvim-lua/completion-nvim'
-
-
-" Async Support
-Plug 'skywind3000/asyncrun.vim'
-" Pandoc MD Preview
-Plug 'conornewton/vim-pandoc-markdown-preview'
-" Vim Wiki
-Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-commentary'
+Plug 'ap/vim-css-color'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-slash'
+Plug 'SirVer/ultisnips'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'honza/vim-snippets'
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'ixru/nvim-markdown'
 call plug#end()
+colorscheme material
 set termguicolors
-set number
 set mouse=a
+set number
+set ignorecase
+set smartcase 
+set ruler
