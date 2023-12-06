@@ -8,12 +8,11 @@ general {
 }
 
 order += "disk /"
-order += "run_watch DHCP"
 order += "ethernet eth0"
 order += "battery 0"
 order += "cpu_usage"
 order += "memory"
-
+order += "volume master"
 wireless __first__ {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
         format_down = "W: down"
@@ -68,3 +67,10 @@ disk "/" {
         format = "%free"
 }
 
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
