@@ -8,12 +8,13 @@ general {
 }
 
 order += "disk /"
+order +="wireless wlp0s20f3"
 order += "ethernet eth0"
 order += "battery 0"
 order += "cpu_usage"
 order += "memory"
 order += "volume master"
-wireless __first__ {
+wireless wlp0s20f3{
         format_up = "W: (%quality at %essid, %bitrate) %ip"
         format_down = "W: down"
 }
