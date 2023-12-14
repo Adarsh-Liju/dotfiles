@@ -44,6 +44,19 @@
 ;; Set the default indentation for Python
 (setq-default python-indent 4)
 
+;; Enable LSP for Python
+(use-package lsp-mode
+  :ensure t
+  :commands lsp
+  :config
+  (add-hook 'python-mode-hook #'lsp))
+
+;; LSP client for Python (Microsoft's LSP implementation)
+(use-package lsp-python-ms
+  :ensure t
+  :config
+  (setq lsp-python-ms-executable (executable-find "python-language-server")))
+
 ;; Key bindings
 (global-set-key (kbd "<f8>") 'elpy-shell-switch-to-shell)
 
@@ -67,6 +80,31 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(gruvbox-theme flycheck elpy use-package)))
+ '(package-selected-packages '(format-all evil gruvbox-theme flycheck elpy use-package)))
 
 (setq inhibit-startup-screen t)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
+(use-package format-all
+  :preface
+  (defun ian/format-code ()
+    "Auto-format whole buffer."
+    (interactive)
+    (if (derived-mode-p 'prolog-mode)
+        (prolog-indent-buffer)
+      (format-all-buffer)))
+  :config
+  (global-set-key (kbd "M-F") #'ian/format-code)
+  (add-hook 'prog-mode-hook #'format-all-ensure-formatter))
