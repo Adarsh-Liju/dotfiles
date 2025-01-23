@@ -13,4 +13,7 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.media.image-nvim" },
+  { import = "astrocommunity.media.img-clip-nvim" },
+  { import = "astrocommunity.media.pets-nvim" },
 }
