@@ -4,12 +4,8 @@ bold_font        auto
 italic_font      auto
 bold_italic_font auto
 font_size 14 
-background_opacity 0.9
+selection_foreground none
+selection_background #28344a
 url color #FF0000
 
 
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-include current-theme.conf
-# END_KITTY_THEME
